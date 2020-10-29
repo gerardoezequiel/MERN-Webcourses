@@ -1,58 +1,60 @@
 import mongoose from 'mongoose';
 
-const teacherSchema = new mongoose.Schema(
+const courseShema = new mongoose.Schema(
   {
-    teacher: String,
-    github: String,
-    email: String,
-    company: String,
+    picture: String,
+    coursename: String,
+    category: String,
     description: String,
+    duration: String,
+    urlcourse: String,
+    teacher: String,
   },
   {
     timestamps: true,
   },
 );
 
-const Teacher = mongoose.model('Teacher', teacherSchema);
+const Course = mongoose.model('Course', courseShema);
 
-export const getAllTeacher = async () => {
+export const getAllCourse = async () => {
   try {
-    return await Teacher.find();
+    return await Course.find();
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export const getTeacherResourceById = async (id) => {
+export const getCourseResourceById = async (id) => {
   try {
-    return await Teacher.findById(id);
+    return await Course.findById(id);
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export const createTeacherResource = async (data) => {
+export const createCourseResource = async (data) => {
   try {
-    return await Teacher.create({ ...data });
+    return await Course.create({ ...data });
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export const updateTeacherResource = async (id, data) => {
+export const updateCourseResource = async (id, data) => {
   try {
-    return await Teacher.findByIdAndUpdate(id, { ...data });
+    return await Course.findByIdAndUpdate(id, { ...data });
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export const deleteTeacherResource = async (id) => {
+export const deleteCourseResource = async (id) => {
   try {
-    return await Teacher.findByIdAndDelete(id);
+    return await Course.findByIdAndDelete(id);
   } catch (error) {
     throw new Error(error);
   }
 };
 
-export default Teacher;
+export default Course;

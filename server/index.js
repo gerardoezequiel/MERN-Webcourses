@@ -8,6 +8,7 @@ import jsonResponseMiddleware from './middleware/json-response.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
 // Routes
 import teacherRouter from './routes/teacher.js';
+import courseRouter from './routes/course.js';
 
 const HOST = 'localhost';
 const PORT = 4000;
@@ -31,6 +32,8 @@ server.use(jsonResponseMiddleware);
 
 // El router de teacher
 server.use(teacherRouter);
+// El router de course
+server.use(courseRouter);
 
 // Sino no hay rutas definidas envia error al cliente
 server.use(errorHandlerMiddleware);
