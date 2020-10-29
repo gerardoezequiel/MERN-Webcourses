@@ -6,9 +6,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "react-router-dom": "^5.2.0"
   },
   "workspaces": [
-    "server", "client"
+    "server",
+    "client"
   ]
 }

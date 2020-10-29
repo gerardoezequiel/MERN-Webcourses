@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAllTeachers } from '../../lib/links.js';
+import { getAllCourses } from '../lib/links.js';
 
 const Courses = () => {
   const [cursoData, setCursoData] = useState([]);
