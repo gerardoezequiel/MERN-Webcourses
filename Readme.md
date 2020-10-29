@@ -10,9 +10,33 @@ Tambien se mostrará información sobre los instructores que dan los cursos.
 
 Necesitaremos 2 modelos de datos: Uno para los cursos y otro para los instructores.
 
-De cada curso necesitaremos una imagen promocional (como un URL a una dirección web con la imagen), su nombre, la categoria, una descripción, la duración del curso (hazlo como un simple string, ej: "Dos semanas" o "Tres meses"), el enlace a la web del curso, el nombre instructor del curso y el nombre de la empresa que promueve el curso. Habrá 3 posibles categorias: HTML, CSS y JavaScript. El usuario no podrá crear nuevas categorias. Solo podrá elegir una de las categorias existentes.
+De cada curso necesitaremos una imagen promocional (como un URL a una dirección web con la imagen), su nombre, la categoria, una descripción, la duración del curso (hazlo como un simple string, ej: "Dos semanas" o "Tres meses"), el enlace a la web del curso, el nombre instructor del curso.
 
-Respecto a los instructores, de cada uno necesitamos su nombre completo, su email, un número de telefono, su fecha de nacimiento, la ciudad donde viven y una presentación.
+Habrá 3 posibles categorias de cursos: HTML, CSS y JavaScript.
+
+El usuario no podrá crear nuevas categorias. Solo podrá elegir una de las categorias existentes.
+
+Respecto a los instructores, de cada uno necesitamos su nombre completo, su email, cuenta de github, compañía, y una descripción.
+
+## Variables
+
+### Modelo de datos de cursos:
+
+- Picture
+- Coursename
+- Category
+- Description
+- Duration
+- URLcourse
+- Teacher
+
+### Modelo de datos de profesores:
+
+- Teacher
+- GitHub
+- e-mail
+- Company
+- Description
 
 ## Páginas que crearemos para el Cliente
 
