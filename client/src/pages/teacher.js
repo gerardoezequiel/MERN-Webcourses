@@ -6,7 +6,6 @@ const Teachers = () => {
 
   const fetchAllProfes = async () => {
     const data = await getAllTeachers();
-    console.log({ data });
     setProfeData(data);
   };
 

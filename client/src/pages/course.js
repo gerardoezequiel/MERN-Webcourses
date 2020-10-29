@@ -6,7 +6,6 @@ const Courses = () => {
 
   const fetchAllCursos = async () => {
     const data = await getAllCourses();
-    console.log({ data });
     setCursoData(data);
   };
 
@@ -19,14 +18,14 @@ const Courses = () => {
       <h2>Lista Cursos</h2>
 
       <ul>
-        {cursoData.map((item, i) => {
+          {cursoData.map((item, i) => {
           return (
             <li key={i}>
               <h3>{item.coursename}</h3>
               <p>{item.duration}</p>
             </li>
           );
-        })}
+  })}
       </ul>
     </main>
   );
