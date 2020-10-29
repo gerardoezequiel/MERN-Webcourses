@@ -1,31 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors'; 
+import nodemon from 'nodemon';
+import winston from 'winston';
+import mongoose from 'mongoose';
+import {Teacher, Course} from './data.js'
+
 const app = express();
 const PORT = 4000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// Profesor
-class Teacher {
-  constructor(nombre, git, email, com, des) {
-    this.teacher = nombre;
-    this.github = git;
-    this.email = email;
-    this.company = com;
-    this.description = des;
-  }
-  saludar() {
-    return (
-      'Me llamo ' +
-      this.teacher +
-      ', mi GitHub es ' +
-      this.github +
-      ' y trabajo para ' +
-      this.company
-    );
-  }
-}
 
 const profesores = [];
 profesores.push(
@@ -39,31 +24,6 @@ profesores.push(
 );
 
 //const categorias = ['HTML', 'CSS', 'JavaScript'];
-
-// Curso
-class Course {
-  constructor(fot, nom, cat, des, dur, url, tea) {
-    this.picture = fot;
-    this.coursename = nom;
-    this.category = cat;
-    this.description = des;
-    this.duration = dur;
-    this.urlcourse = url;
-    this.teacher = tea;
-  }
-  categorizar() {
-    return (
-      'Este curso se llama ' +
-      this.coursename +
-      ', dura ' +
-      this.duration +
-      ' y lo da ' +
-      this.teacher
-    );
-  }
-}
-
-const cursos = [];
 
 // Dirección web base. Se limita a mostrar la lista de profesores.
 app.get('/profe', (req, res) => {
@@ -109,6 +69,58 @@ app.put('/profe/:id', (req, res) => {
 app.delete('/profe/:id', (req, res) => {
   profesores.splice(req.params.id, 1);
   res.send('Profesor eliminado correctamente!');
+});
+
+const curso = [new Course("java.jpg","Clases de Javascript",2,"Aprenda Javascript con nosotros","2 semanas","aprendejava.es","Jose Mota")];
+
+// Lista de cursos.
+
+app.get('/curso', (req, res) => {
+  let texto = '<h1>Lista de cursos</h1>';
+  if (curso.length > 0) {
+    curso.forEach((element) => {
+      texto += '<p>' + element.categorizar() + '</p>';
+    });
+  } else texto += '<h2>Esta lista esta vacia</h2>';
+  res.send(texto);
+});
+
+// El usuario puede introducir aquí los datos de un curso nuevo
+app.post('/curso', (req, res) => {
+  curso.push(
+    new Course(
+      req.body.picture,
+      req.body.coursename,
+      req.body.category,
+      req.body.description,
+      req.body.duration,
+      req.body.urlcourse,
+      req.body.teacher,
+    ),
+  );
+  res.send('¡Curso introducido con exito!');
+});
+
+// Modificaremos aun curso ya introducido.
+app.put('/curso/:id', (req, res) => {
+  if (curso.length > 0) {
+    curso[req.params.id] = new Course(
+      req.body.picture,
+      req.body.coursename,
+      req.body.category,
+      req.body.description,
+      req.body.duration,
+      req.body.urlcourse,
+      req.body.teacher,
+    );
+    res.send('¡El último curso introducido ha sido modificado!');
+  } else res.send('¡No hay ningún curso en la lista!');
+});
+
+// Quitamos un curso de la lista.
+app.delete('/curso/:id', (req, res) => {
+  curso.splice(req.params.id, 1);
+  res.send('Curso eliminado correctamente!');
 });
 
 // Por si se produce un error.
