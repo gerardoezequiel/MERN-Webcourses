@@ -9,3 +9,8 @@ export const ListAllCourses = async (request, response) => {
     return response.status(500).send({ message });
   }
 };
+
+// TODO:
+// Get course by Id
+// Edit course
+// Delete course

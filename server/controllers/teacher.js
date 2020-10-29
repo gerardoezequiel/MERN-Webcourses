@@ -11,3 +11,8 @@ export const ListAllTeachers = async (request, response) => {
     });
   }
 };
+
+// TODO:
+// Get teacher by Id
+// Edit teacher
+// Delete teacher

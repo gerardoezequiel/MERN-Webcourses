@@ -1,4 +1,8 @@
+// TODO:
+// Mover  de la raiz o borrar
+
 // Profesor
+
 export class Teacher {
   constructor(nombre, git, email, com, des) {
     this.teacher = nombre;
