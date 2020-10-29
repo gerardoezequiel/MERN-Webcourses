@@ -4,24 +4,17 @@ import cors from 'cors';
 import nodemon from 'nodemon';
 import winston from 'winston';
 import mongoose from 'mongoose';
-import {Teacher, Course} from './data.js'
+import { Teacher, Course } from './data/teacers.js'
+
 
 const app = express();
+const HOST = "localhost"
 const PORT = 4000;
+export const databaseURI = 'mongodb://localhost/mongoose-intro';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-const profesores = [];
-profesores.push(
-  new Teacher(
-    'Paco Miraflores',
-    'Perejota',
-    'paquitochocolatero84@gmail.com',
-    'Corporación Umbrella',
-    'Soy profesor de Informatica. Tengo certificado universitario de programador web.',
-  ),
-);
+mongoose.connect(databaseURI); 
 
 //const categorias = ['HTML', 'CSS', 'JavaScript'];
 
@@ -132,3 +125,4 @@ app.get('*', (req, res) => {
 app.listen(PORT, () =>
   console.log('El servidor se ha iniciado en el puerto ' + PORT),
 );
+
