@@ -6,12 +6,12 @@ import mongoose from 'mongoose';
 import httpLoggerMiddleware from './middleware/logger-middleware.js';
 import jsonResponseMiddleware from './middleware/json-response.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
+// Routes
+import teacherRouter from './routes/teacher.js';
 
-import musicRouter from './routes/music.js';
-
-const HOST = '127.0.0.1';
-const PORT = 5000;
-export const databaseURI = 'mongodb://localhost/mongoose-intro';
+const HOST = 'localhost';
+const PORT = 4000;
+export const databaseURI = 'mongodb://localhost/web-courses';
 // const databaseURI = 'mongodb://localhost:2700/mongoose-intro
 
 // Creacion del servidor
@@ -29,8 +29,8 @@ server.use(httpLoggerMiddleware);
 // Utiliza un middleware que permite crear headers de respuesta que indiquen que el contenido es JSON
 server.use(jsonResponseMiddleware);
 
-// El router de musica
-server.use(musicRouter);
+// El router de teacher
+server.use(teacherRouter);
 
 // Sino no hay rutas definidas envia error al cliente
 server.use(errorHandlerMiddleware);

@@ -1,20 +1,20 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors'; 
+import cors from 'cors';
 import nodemon from 'nodemon';
 import winston from 'winston';
 import mongoose from 'mongoose';
-import {Teacher} from './data/teachers.js'
-import {Course} from './data/courses.js'
+import { Teacher } from './data/teachers.js';
+import { Course } from './data/courses.js';
 
 const app = express();
-const HOST = "localhost"
+const HOST = 'localhost';
 const PORT = 4000;
 export const databaseURI = 'mongodb://localhost/mongoose-intro';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-mongoose.connect(databaseURI); 
+mongoose.connect(databaseURI);
 
 //const categorias = ['HTML', 'CSS', 'JavaScript'];
 
@@ -64,7 +64,17 @@ app.delete('/profe/:id', (req, res) => {
   res.send('Profesor eliminado correctamente!');
 });
 
-const curso = [new Course("java.jpg","Clases de Javascript",2,"Aprenda Javascript con nosotros","2 semanas","aprendejava.es","Jose Mota")];
+const curso = [
+  new Course(
+    'java.jpg',
+    'Clases de Javascript',
+    2,
+    'Aprenda Javascript con nosotros',
+    '2 semanas',
+    'aprendejava.es',
+    'Jose Mota',
+  ),
+];
 
 // Lista de cursos.
 
@@ -125,4 +135,3 @@ app.get('*', (req, res) => {
 app.listen(PORT, () =>
   console.log('El servidor se ha iniciado en el puerto ' + PORT),
 );
-
