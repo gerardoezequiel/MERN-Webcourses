@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const courseShema = new mongoose.Schema(
+const courseSchema = new mongoose.Schema(
   {
     picture: String,
     coursename: String,
@@ -15,7 +15,7 @@ const courseShema = new mongoose.Schema(
   },
 );
 
-const Course = mongoose.model('Course', courseShema);
+const Course = mongoose.model('Course', courseSchema);
 
 export const getAllCourse = async () => {
   try {
