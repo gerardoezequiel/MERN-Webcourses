@@ -4,8 +4,8 @@ import cors from 'cors';
 import nodemon from 'nodemon';
 import winston from 'winston';
 import mongoose from 'mongoose';
-import { Teacher, Course } from './data/teacers.js'
-
+import {Teacher} from './data/teachers.js'
+import {Course} from './data/courses.js'
 
 const app = express();
 const HOST = "localhost"
