@@ -12,7 +12,8 @@
     "winston": "^3.3.3"
   },
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "seed": "node ./data/seeds.js"
   },
   "type": "module"
 }

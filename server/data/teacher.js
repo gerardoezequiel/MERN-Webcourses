@@ -4,7 +4,7 @@ const teachers = [
     github: 'robertito',
     email: 'roberdwo@gmail.com',
     company: 'Resourts Corte Irlandes',
-    description: 'Tengo carrera universitaria en programación web'
+    description: 'Tengo carrera universitaria en programación web',
   },
 ];
 
