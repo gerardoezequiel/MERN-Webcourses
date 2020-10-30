@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTeachers } from '../lib/links.js';
+import { Link, withRouter } from 'react-router-dom';
 
 const Teachers = () => {
   const [profeData, setProfeData] = useState([]);
@@ -16,13 +17,19 @@ const Teachers = () => {
   return (
     <main>
       <h2>Lista Profesores</h2>
-
       <ul>
-        {profeData.map((item, i) => {
+        {profeData.map((teacher, i) => {
           return (
             <li key={i}>
-              <h3>{item.teacher}</h3>
-              <p>{item.github}</p>
+              <h1>{teacher.teacher}</h1>
+              <h2>Github:</h2>
+              <h3>{teacher.github}</h3>
+              <h2>E-mail:</h2>
+              <h3>{teacher.email}</h3>
+              <h2>Empresa:</h2>
+              <h3>{teacher.company}</h3>
+              <h2>Descripción:</h2>
+              <h3>{teacher.description}</h3>
             </li>
           );
         })}

@@ -3,11 +3,11 @@ import React from 'react';
 const FormCourse = () => {
   return (
     <main>
-      <h2>New</h2>
+      <h2>Introduzca el nuevo curso</h2>
 
       <form>
-        <label>Foto:</label>
-        <input type="text" name="title" id="title" />
+        <label>URL de la Foto:</label>
+        <input type="text" name="imagen" />
         <label>Nombre:</label>
         <input type="text" name="title" id="title" />
         <label>Categoría</label>
