@@ -10,6 +10,7 @@ import errorHandlerMiddleware from './middleware/error-handler.js';
 // Routes
 import teacherRouter from './routes/teacher.js';
 import courseRouter from './routes/course.js';
+import cors from 'cors';
 
 const HOST = 'localhost';
 const PORT = 5000;
@@ -31,6 +32,7 @@ server.use(bodyParser.json());
 server.use(httpLoggerMiddleware);
 // Utiliza un middleware que permite crear headers de respuesta que indiquen que el contenido es JSON
 server.use(jsonResponseMiddleware);
+server.use(cors());
 
 // El router de teacher
 server.use(teacherRouter);
