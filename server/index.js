@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from './lib/logger.js';
 import mongoose from 'mongoose';
+import cors from 'cors';
 // midlewares
 import httpLoggerMiddleware from './middleware/logger-middleware.js';
 import jsonResponseMiddleware from './middleware/json-response.js';
@@ -11,12 +12,13 @@ import teacherRouter from './routes/teacher.js';
 import courseRouter from './routes/course.js';
 
 const HOST = 'localhost';
-const PORT = 4000;
+const PORT = 5000;
 export const databaseURI = 'mongodb://localhost/web-courses';
 // const databaseURI = 'mongodb://localhost:2700/mongoose-intro
 
 // Creacion del servidor
 const server = express();
+server.use(cors);
 mongoose.connect(databaseURI, {
   useFindAndModify: false,
   useNewUrlParser: true,
