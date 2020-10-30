@@ -3,7 +3,7 @@ import React from 'react';
 const FormTeacher = () => {
   return (
     <main>
-      <h2>New</h2>
+      <h2>Introduzca el nuevo profesor</h2>
 
       <form>
         <label>Nombre:</label>
