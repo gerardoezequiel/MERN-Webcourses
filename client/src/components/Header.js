@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <h1>Cursos Online Adecco</h1>
+      <h1>Cursos Online</h1>
         <nav>
     <ul>
       <li>
