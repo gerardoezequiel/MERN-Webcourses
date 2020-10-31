@@ -36,30 +36,30 @@
 //   );
 // }
 
-import React from 'react';
+import React, { useState } from 'react';
 import { createNewTeacher } from '../lib/links.js';
 
 const FormTeacher = () => {
-  let nom = '';
-  let git = '';
-  let ema = '';
-  let emp = '';
-  let des = '';
+  const [nom, setNom] = useState('');
+  const [git = '', setGit] = useState('');
+  const [ema = '', setEma] = useState('');
+  const [emp = '', setEmp] = useState('');
+  const [des = '', setDes] = useState('');
 
   const ajuNom = (event) => {
-    nom = event.currentTarget.value;
+    setNom(event.currentTarget.value);
   };
   const ajuGit = (event) => {
-    git = event.currentTarget.value;
+    setGit(event.currentTarget.value);
   };
   const ajuEma = (event) => {
-    ema = event.currentTarget.value;
+    setEma(event.currentTarget.value);
   };
   const ajuEmp = (event) => {
-    emp = event.currentTarget.value;
+    setEmp(event.currentTarget.value);
   };
   const ajuDes = (event) => {
-    des = event.currentTarget.value;
+    setDes(event.currentTarget.value);
   };
 
   const introduceprofe = () => {
@@ -93,7 +93,7 @@ const FormTeacher = () => {
           id="description"
           onChange={ajuDes}
         ></textarea>
-        <button type="button" onclick={introduceprofe}>
+        <button type="button" onClick={introduceprofe}>
           Crear Profesor
         </button>
       </form>

@@ -6,11 +6,11 @@ export const getAllTeachers = async () => {
 };
 
 export const createNewTeacher = async (profe, response) => {
-  await fetch('/teacher', {
+  await fetch(REACT_APP_SERVER_URL + '/teacher', {
     method: 'POST',
     body: JSON.stringify(profe),
     headers: { 'Content-Type': 'application/json' },
-  }).then((res) => res.json());
+  });
 };
 
 export const getAllCourses = async () => {
