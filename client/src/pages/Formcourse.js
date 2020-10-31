@@ -9,21 +9,21 @@ const FormCourse = () => {
         <label>URL de la Foto:</label>
         <input type="text" name="imagen" />
         <label>Nombre:</label>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="coursename" id="coursename" />
         <label>Categoría</label>
-        <select name="select">
+        <select name="category">
           <option value="1">HTML</option>
           <option value="2">CSS</option>
           <option value="3">JavaScript</option>
         </select>
         <label>Descripción:</label>
-        <textarea name="artist" id="artist"></textarea>
+        <textarea name="description" id="artist"></textarea>
         <label>Duración:</label>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="duration" id="title" />
         <label>Dirección web:</label>
-        <input type="text" name="title" id="title" />
+        <input type="url" name="urlcourse" id="title" />
         <label>Profesor:</label>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="teacher" id="title" />
         <button type="submit">Crear</button>
       </form>
     </main>
