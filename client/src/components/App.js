@@ -9,6 +9,7 @@ import Footer from './Footer.js';
 import Home from '../pages/Home.js';
 import Teachers from '../pages/teacher.js';
 import Courses from '../pages/course.js';
+import Filtro from '../pages/Filtro.js';
 import Coursedata from '../pages/Coursedata.js';
 import ErrorPage from '../pages/Error.js';
 import FormCourse from '../pages/Formcourse.js';
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/profesor" component={Teachers} />
             <Route path="/curso" component={Courses} />
+            <Route path="/cursofiltro/:cat" component={Filtro} />
             <Route path="/cursodata/:_id" component={Coursedata} />
             <Route path="/crearcurso" component={FormCourse} />
             <Route path="/crearprofesor" component={FormTeacher} />

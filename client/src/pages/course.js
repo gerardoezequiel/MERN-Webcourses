@@ -16,6 +16,7 @@ const Courses = () => {
 
   return (
     <main>
+      <Link to="/crearcurso">Crear un nuevo Curso</Link>
       <h2>Lista Cursos</h2>
       <ul>
         {cursoData.map((item) => {
