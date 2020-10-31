@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTeachers } from '../lib/links.js';
+import { Link } from 'react-router-dom';
 
 const Teachers = () => {
   const [profeData, setProfeData] = useState([]);
@@ -15,6 +16,7 @@ const Teachers = () => {
 
   return (
     <main>
+      <Link to="/crearprofesor">Crear un nuevo Profesor</Link>
       <h2>Lista Profesores</h2>
       <ul>
         {profeData.map((teacher, i) => {

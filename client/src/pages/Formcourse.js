@@ -51,7 +51,7 @@ const FormCourse = () => {
       <h2>Introduzca el nuevo curso</h2>
 
       <form>
-        <label>URL de la Foto:</label>
+        <label>Foto:</label>
         <input type="text" name="picture" id="picture" onChange={ajuFot} />
         <label>Nombre:</label>
         <input
@@ -62,9 +62,9 @@ const FormCourse = () => {
         />
         <label>Categoría</label>
         <select name="category" id="category" onChange={ajuCat}>
-          <option value="1">HTML</option>
-          <option value="2">CSS</option>
-          <option value="3">JavaScript</option>
+          <option value="0">HTML</option>
+          <option value="1">CSS</option>
+          <option value="2">JavaScript</option>
         </select>
         <label>Descripción:</label>
         <textarea
