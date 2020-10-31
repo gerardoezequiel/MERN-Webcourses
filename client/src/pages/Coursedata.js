@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { getAllCourses } from '../lib/links.js';
+import { useParams } from 'react-router-dom';
+import { getCourse } from '../lib/links.js';
 
 const Coursedata = () => {
-  const [cursoData, setCursoData] = useState([]);
+  const { _id } = useParams();
+  const [curso, setCurso] = useState({});
 
-  const fetchAllCursos = async () => {
-    const data = await getAllCourses();
-    setCursoData(data);
+  const fetchCurso = async (_id) => {
+    const datos = await getCourse(_id);
+    setCurso(datos);
   };
 
   useEffect(() => {
-    fetchAllCursos();
-  }, []);
+    fetchCurso(_id);
+  }, [_id]);
 
+  const valor = ['HTML', 'CSS', 'JavaScript'];
+  const {
+    coursename,
+    category,
+    description,
+    duration,
+    urlcourse,
+    teacher,
+  } = curso;
   return (
     <main>
-      <h2>Lista Cursos</h2>
-
-      <ul>
-          {cursoData.map((item, i) => {
-          return (
-            <li key={i}>
-              <h3>{item.coursename}</h3>
-              <p>{item.duration}</p>
-            </li>
-          );
-  })}
-      </ul>
+      <h2>Curso {coursename}:</h2>
+      <p>Categoria: {valor[category]}</p>
+      <p>Duración: {duration}</p>
+      <p>Sition web: {urlcourse}</p>
+      <p>Profesor: {teacher}</p>
+      <h3>Descripción del curso:</h3>
+      <p>{description}</p>
     </main>
   );
 };

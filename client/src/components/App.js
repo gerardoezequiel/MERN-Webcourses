@@ -6,10 +6,10 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 
 //pages
-import Home from "../pages/Home.js";
-import Teachers from "../pages/teacher.js";
-import Courses from "../pages/course.js";
-import Coursedata from "../pages/Coursedata.js";
+import Home from '../pages/Home.js';
+import Teachers from '../pages/teacher.js';
+import Courses from '../pages/course.js';
+import Coursedata from '../pages/Coursedata.js';
 import ErrorPage from '../pages/Error.js';
 import FormCourse from '../pages/Formcourse.js';
 import FormTeacher from '../pages/Formteacher.js';
@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/profesor" component={Teachers} />
             <Route path="/curso" component={Courses} />
-            <Route path="/cursodata" component={Coursedata} />
+            <Route path="/cursodata/:_id" component={Coursedata} />
             <Route path="/crearcurso" component={FormCourse} />
             <Route path="/crearprofesor" component={FormTeacher} />
             <Route path="/about" component={About} />
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
