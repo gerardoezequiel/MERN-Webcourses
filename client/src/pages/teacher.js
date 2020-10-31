@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTeachers } from '../lib/links.js';
-import { Link, withRouter } from 'react-router-dom';
 
 const Teachers = () => {
   const [profeData, setProfeData] = useState([]);

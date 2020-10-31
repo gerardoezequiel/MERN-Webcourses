@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllCourses } from '../lib/links.js';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   const [cursoData, setCursoData] = useState([]);
@@ -16,16 +17,18 @@ const Courses = () => {
   return (
     <main>
       <h2>Lista Cursos</h2>
-
       <ul>
-          {cursoData.map((item, i) => {
+        {cursoData.map((item) => {
           return (
-            <li key={i}>
-              <h3>{item.coursename}</h3>
-              <p>{item.duration}</p>
+            <li key={item.id}>
+              <Link to={`/cursodata/${item._id}`}>
+                <i>{item.coursename}</i>
+              </Link>
+              <br />
+              (Duración: {item.duration})
             </li>
           );
-  })}
+        })}
       </ul>
     </main>
   );
