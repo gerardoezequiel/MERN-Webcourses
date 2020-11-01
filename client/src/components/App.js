@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //UI components
 import Header from './Header.js';
@@ -9,12 +9,13 @@ import Footer from './Footer.js';
 import Home from '../pages/Home.js';
 import Teachers from '../pages/teacher.js';
 import Courses from '../pages/course.js';
-import Filtro from '../pages/Filtro.js';
 import Coursedata from '../pages/Coursedata.js';
-import ErrorPage from '../pages/Error.js';
 import FormCourse from '../pages/Formcourse.js';
 import FormTeacher from '../pages/Formteacher.js';
 import About from '../pages/About.js';
+import ChaCou from '../pages/ChaCou.js';
+import ChaTea from '../pages/ChaTea.js';
+import ErrorPage from '../pages/Error.js';
 
 function App() {
   return (
@@ -26,11 +27,12 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/profesor" component={Teachers} />
             <Route path="/curso" component={Courses} />
-            <Route path="/cursofiltro/:cat" component={Filtro} />
             <Route path="/cursodata/:_id" component={Coursedata} />
             <Route path="/crearcurso" component={FormCourse} />
             <Route path="/crearprofesor" component={FormTeacher} />
             <Route path="/about" component={About} />
+            <Route path="/cursomodificar/:_id" component={ChaCou} />
+            <Route path="/profemodificar/:_id" component={ChaTea} />
             <Route path="/*" component={ErrorPage} />
           </Switch>
           <Footer />
