@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCourse } from '../lib/links.js';
+import { getCourse, valor } from '../lib/links.js';
+import { Link } from 'react-router-dom';
 
 const Coursedata = () => {
   const { _id } = useParams();
@@ -15,7 +16,6 @@ const Coursedata = () => {
     fetchCurso(_id);
   }, [_id]);
 
-  const valor = ['HTML', 'CSS', 'JavaScript'];
   const {
     coursename,
     category,
@@ -29,10 +29,13 @@ const Coursedata = () => {
       <h2>Curso {coursename}:</h2>
       <p>Categoria: {valor[category]}</p>
       <p>Duración: {duration}</p>
-      <p>Sition web: {urlcourse}</p>
+      <p>Sitio web: {urlcourse}</p>
       <p>Profesor: {teacher}</p>
       <h3>Descripción del curso:</h3>
       <p>{description}</p>
+      <button type="button">
+        <Link to={'/cursomodificar/' + _id}>Modificar Curso</Link>
+      </button>
     </main>
   );
 };

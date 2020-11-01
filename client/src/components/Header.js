@@ -4,28 +4,23 @@ import { Link, withRouter } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <h1>Cursos Online</h1>
+      <Link to="/">
+        <h1>Coursify</h1>
+        <p> Courses IT yourself</p>
+      </Link>
       <nav id="menu">
         <ul>
           <li>
-            <Link to="/profesor">Lista de Profesores</Link>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/curso">Lista de Cursos</Link>
-            <ul>
-              <li>
-                <Link to="/cursofiltro/0">HTML</Link>
-              </li>
-              <li>
-                <Link to="/cursofiltro/1">CSS</Link>
-              </li>
-              <li>
-                <Link to="/cursofiltro/2">JavaScript</Link>
-              </li>
-            </ul>
+            <Link to="/curso">Cursos</Link>
           </li>
           <li>
-            <Link to="/about">Creditos</Link>
+            <Link to="/profesor">Profesores</Link>
+          </li>
+          <li>
+            <Link to="/about">Conócenos</Link>
           </li>
         </ul>
       </nav>
