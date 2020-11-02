@@ -47,12 +47,15 @@ const FormCourse = () => {
   };
 
   return (
-    <main>
+    <main className="crear-curso">
       <h3>Introduzca el nuevo curso</h3>
-      
-        <form>
+
+      <form>
+        <div>
           <label className="Label">Foto:</label>
           <input type="text" name="picture" id="picture" onChange={ajuFot} />
+        </div>
+        <div>
           <label className="Label">Nombre:</label>
           <input
             type="text"
@@ -60,28 +63,44 @@ const FormCourse = () => {
             id="coursename"
             onChange={ajuNom}
           />
+        </div>
+        <div>
           <label className="Label">Categoría</label>
-          <select className="Select" name="category" id="category" onChange={ajuCat}>
+          <select
+            className="Select"
+            name="category"
+            id="category"
+            onChange={ajuCat}
+          >
             <option value="0">HTML</option>
             <option value="1">CSS</option>
             <option value="2">JavaScript</option>
           </select>
+        </div>
+        <div>
           <label>Descripción:</label>
           <textarea
             name="description"
             id="description"
             onChange={ajuDes}
           ></textarea>
+        </div>
+        <div>
           <label>Duración:</label>
           <input type="text" name="duration" id="duration" onChange={ajuDur} />
+        </div>
+        <div>
           <label>Dirección web:</label>
           <input type="url" name="urlcourse" id="urlcourse" onChange={ajuUrl} />
+        </div>
+        <div>
           <label>Profesor:</label>
           <input type="text" name="teacher" id="teacher" onChange={ajuPro} />
-          <button type="button" onClick={introducecurso}>
-            Crear Curso
-          </button>
-        </form>
+        </div>
+        <button type="button" onClick={introducecurso}>
+          Crear Curso
+        </button>
+      </form>
     </main>
   );
 };
