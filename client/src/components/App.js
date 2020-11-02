@@ -20,24 +20,22 @@ import ErrorPage from '../pages/Error.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/profesor" component={Teachers} />
-            <Route path="/curso" component={Courses} />
-            <Route path="/cursodata/:_id" component={Coursedata} />
-            <Route path="/crearcurso" component={FormCourse} />
-            <Route path="/crearprofesor" component={FormTeacher} />
-            <Route path="/about" component={About} />
-            <Route path="/cursomodificar/:_id" component={ChaCou} />
-            <Route path="/profemodificar/:_id" component={ChaTea} />
-            <Route path="/*" component={ErrorPage} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-      </header>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/profesor" component={Teachers} />
+          <Route path="/curso" component={Courses} />
+          <Route path="/cursodata/:_id" component={Coursedata} />
+          <Route path="/crearcurso" component={FormCourse} />
+          <Route path="/crearprofesor" component={FormTeacher} />
+          <Route path="/about" component={About} />
+          <Route path="/cursomodificar/:_id" component={ChaCou} />
+          <Route path="/profemodificar/:_id" component={ChaTea} />
+          <Route path="/*" component={ErrorPage} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

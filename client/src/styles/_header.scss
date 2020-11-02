@@ -1,20 +1,22 @@
-
-H1 {
+header {
   display: flex;
   color: rgb(113, 0, 0);
-  margin: 0;
-  align-content: flex-start
+  padding: 1.25rem;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-p {
-  font {
-    size: 100%;
-    color: black;
-  }
+h1 {
+  color: rgb(113, 0, 0);
+  margin: 0;
 }
+
+.brand p {
+  color: black;
+}
+
 nav {
-  
-   ul {
+  ul {
     padding: 0;
     margin: 0;
     list-style: none;
