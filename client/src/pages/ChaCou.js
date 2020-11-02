@@ -71,7 +71,7 @@ const ChaCou = () => {
 
   return (
     <main>
-      <h2>Modifica los datos del curso</h2>
+      <h3>Modifica los datos del curso</h3>
 
       <form>
         <label>Foto:</label>

@@ -26,7 +26,7 @@ const Coursedata = () => {
   } = curso;
   return (
     <main>
-      <h2>Curso {coursename}:</h2>
+      <h3>Curso {coursename}:</h3>
       <p>Categoria: {valor[category]}</p>
       <p>Duración: {duration}</p>
       <p>Sitio web: {urlcourse}</p>

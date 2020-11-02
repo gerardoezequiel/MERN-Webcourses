@@ -1,39 +1,49 @@
-header {
-  background-color: rgba(72, 156, 86, 0.548);
-  padding: 1.25rem;
-  justify-content: space-between;
-  align-items: baseline;
-  h1 {
-    color: white;
-    margin: 0;
+
+H1 {
+  display: flex;
+  color: rgb(113, 0, 0);
+  margin: 0;
+  align-content: flex-start
+}
+
+p {
+  font {
+    size: 100%;
+    color: black;
   }
-  nav {
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      display: flex;
-      li {
-        padding: 0 1.25rem;
-        a {
-          color: white;
-        }
+}
+nav {
+  
+   ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    li {
+      padding: 0 1.25rem;
+      a {
+        color: black;
       }
     }
   }
 }
-
-#menu ul li {
+.Menu ul li {
   background-color: #2e8b6f;
+  display: flex;
+  align-self: right;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
-#menu ul {
+.Menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#menu ul a {
+.Menu ul a {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -45,18 +55,11 @@ header {
   letter-spacing: 1px;
 }
 
-#menu ul li {
-  position: relative;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-
-#menu ul li:hover {
+.Menu ul li:hover {
   background: #157960;
 }
 
-#menu ul ul {
+.Menu ul ul {
   display: none;
   position: absolute;
   top: 100%;
@@ -64,16 +67,16 @@ header {
   padding: 0;
 }
 
-#menu ul ul li {
+.Menu ul ul li {
   float: none;
   width: 150px;
 }
 
-#menu ul ul a {
+.Menu ul ul a {
   line-height: 120%;
   padding: 10px 15px;
 }
 
-#menu ul li:hover > ul {
+.Menu ul li:hover > ul {
   display: block;
 }

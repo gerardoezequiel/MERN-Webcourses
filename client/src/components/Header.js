@@ -3,12 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
+    <section class= "H1">
       <Link to="/">
-        <h1>Coursify</h1>
+        <h1 section ="header">Coursify</h1>
         <p> Courses IT yourself</p>
       </Link>
-      <nav id="menu">
+      <nav className="Menu">
         <ul>
           <li>
             <Link to="/">Inicio</Link>
@@ -24,7 +24,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </section>
   );
 };
 
