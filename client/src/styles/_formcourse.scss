@@ -10,3 +10,21 @@
     width: 10ch;
   }
 }
+
+button{
+display:flex-end;
+align-content:right;
+}
+.AddCourse {
+  color: #ffffff;
+  background-color: #157960;
+  border-color: #011c00;
+  padding: 20px 20px 20px 20px;
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.box select option {
+  padding: 30px;
+}
+

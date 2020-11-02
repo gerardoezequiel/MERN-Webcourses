@@ -1,42 +1,80 @@
-
 h2 {
   font-size: 400%;
   color: black;
+
+  h4 {
+    color: black;
+  }
 }
 
-a {
-  color: white;
+a button {
   text-decoration: none;
 }
 
-p{
-  font{
-    size:120%;
-    color:black;
-    }
+p {
+  font {
+    size: 120%;
+    color: black;
   }
+}
+.Wrap {
+  display: inline-flex;
+  margin: 0 5%;
+  padding: 0 10%;
+}
 
 .Cover {
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Lista {
+  margin-top: 0%;
   margin-bottom: 20%;
   margin-left: 20%;
-  margin-right: 20%;
+  margin-right: 0%;
 }
+
+.Tag {
+  font-size: 2rem;
+  margin-top: 0%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+img {
+  // height: auto;
+  width: 100%;
+  float: right;
+  display: inline-block;
+}
+
 
 
 .VcButton {
-background:    #cc0000;
-border:        1px solid #556699;
-border-radius: 11px;
-box-shadow:    0 1px #444444;
-padding:       20px 45px;
-
-display:       inline-block;
-font:          normal bold 26px/1 "Open Sans", sans-serif;
-text-align:    center;
-text-shadow:   1px 1px #000000;
-
-
-
+  color: white;
+  background: #cc0000;
+  border: 1px solid #556699;
+  border-radius: 11px;
+  box-shadow: 0 1px #444444;
+  padding: 20px 45px;
+  display: inline-block;
+  font: normal bold 26px/1 'Open Sans', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px #000000;
+  align-content: center;
 }
 
+.AddCoursebutton {
+  color: #ffffff;
+  background-color: #611bbd;
+  border-color: #130269;
+}
+
+li{
+  list-style-type: none;
+}

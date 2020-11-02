@@ -10,16 +10,19 @@ body {
   font-weight: 100;
 }
 a {
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
-  &:hover {
-    border-bottom: 1px solid currentColor;
-  }
-  &:focus {
-    color: whitesmoke;
-  }
 }
 
+h3{
+  color: #157960;
+  
+}
+
+h4{
+  color: black;
+  margin-bottom: 0.25rem;
+}
 .app {
   min-height: 100vh;
   display: flex;

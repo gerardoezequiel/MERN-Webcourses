@@ -25,15 +25,15 @@ const Teachers = () => {
         {profeData.map((teacher, i) => {
           return (
             <li key={i}>
-              <h1>{teacher.teacher}</h1>
-              <h2>Descripción:</h2>
-              <h3>{teacher.description}</h3>
-              <h2>Empresa:</h2>
-              <h3>{teacher.company}</h3>
-              <h2>Github:</h2>
-              <h3>{teacher.github}</h3>
-              <h2>E-mail:</h2>
-              <h3>{teacher.email}</h3>
+              <h4>{teacher.teacher}</h4>
+              <h4>Descripción:</h4>
+              <h4>{teacher.description}</h4>
+              <h4>Empresa:</h4>
+              <h4>{teacher.company}</h4>
+              <h4>Github:</h4>
+              <h4>{teacher.github}</h4>
+              <h4>E-mail:</h4>
+              <h4>{teacher.email}</h4>
               <button type="button">
                 <Link to={'/profemodificar/' + teacher._id}>
                   Modificar Profesor

@@ -55,29 +55,32 @@ const Courses = () => {
 
   return (
     <main>
-      <button type="button">
+      <button className="AddCourse" type="button">
         <Link to="/crearcurso">Crear un nuevo Curso</Link>
       </button>
-      <br />
-      <br />
+    
       <Filtro filtro={filtro} />
       <Texteo texta={texta} />
-      <h2>Lista de Cursos:</h2>
+      <div className="Lista">
+      <h3>Lista de Cursos:</h3>
       <ul>
         {cursoData.map((item) => {
           return (
             <li key={item.id}>
               <Link to={`/cursodata/${item._id}`}>
-                <i>{item.coursename}</i>
+                <h3>
+                  <i>{item.coursename}</i>
+                </h3>
               </Link>
               <br />
-              (Duración: {item.duration})
+              Duración: {item.duration}
               <br />
-              categoria: {valor[item.category]}
+              Categoria: {valor[item.category]}
             </li>
           );
         })}
-      </ul>
+        </ul>
+      </div>
     </main>
   );
 };

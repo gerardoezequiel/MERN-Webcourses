@@ -57,17 +57,19 @@ const FormCourse = () => {
         </div>
         <div>
           <label className="Label">Nombre:</label>
+
           <input
             type="text"
             name="coursename"
             id="coursename"
+            placeholder="Nombre del Curso"
             onChange={ajuNom}
           />
         </div>
         <div>
-          <label className="Label">Categoría</label>
+          <label>Categoría</label>
           <select
-            className="Select"
+            className="Cat"
             name="category"
             id="category"
             onChange={ajuCat}
