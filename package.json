@@ -13,5 +13,8 @@
   "workspaces": [
     "server",
     "client"
-  ]
+  ],
+  "scripts": {
+    "start": "yarn workspace server start"
+  }
 }
