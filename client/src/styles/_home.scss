@@ -1,61 +1,42 @@
-h2 {
-  font-size: 400%;
-  color: black;
-
-  h4 {
-    color: black;
-  }
-}
-
-a button {
-  text-decoration: none;
-}
-
-p {
-  font {
-    size: 120%;
-    color: black;
-  }
-}
 .Wrap {
   display: inline-flex;
-  margin: 0 5%;
-  padding: 0 10%;
+}
+  .Cover {
+    margin-top: 5%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+   }
+
+    .Titulo {
+      font-size: 300%;
+      color: black;
+      margin-right:15%;
 }
 
-.Cover {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.Lista {
-  margin-top: 0%;
-  margin-bottom: 20%;
-  margin-left: 20%;
-  margin-right: 0%;
-}
-
-.Tag {
-  font-size: 2rem;
-  margin-top: 0%;
-  margin-bottom: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
+    .Tag {
+    font-size: 1.5rem;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 
-img {
-  // height: auto;
-  width: 100%;
-  float: right;
-  display: inline-block;
+    .Portada {
+      height: auto;
+      width: 50%;
+      float: right;
+      display: inline-block;
+      margin-right:20%;
+      margin-top:10%;
+  
 }
 
-
+//botones
 
 .VcButton {
+  margin-left:20%;
   color: white;
   background: #cc0000;
   border: 1px solid #556699;
@@ -67,14 +48,5 @@ img {
   text-align: center;
   text-shadow: 1px 1px #000000;
   align-content: center;
-}
-
-.AddCoursebutton {
-  color: #ffffff;
-  background-color: #611bbd;
-  border-color: #130269;
-}
-
-li{
-  list-style-type: none;
+  text-decoration: none;
 }

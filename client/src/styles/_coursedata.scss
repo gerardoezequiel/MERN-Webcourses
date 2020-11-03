@@ -12,27 +12,15 @@
       display: flex;
       align-items: center;
 
-      img {
-        border-radius: 50%;
-        height: 6rem;
-        width: 6rem;
-        align-items: left;
-        border-color: grey 1rem;
-      }
 
       .Author {
         padding-left: 2rem;
         margin-bottom: 2rem;
 
-        h4,
         p {
           margin: 0.5rem;
         }
       }
     }
-  }
-
-  .Pic {
-    flex: 1;
   }
 }

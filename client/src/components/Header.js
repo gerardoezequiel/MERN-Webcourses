@@ -1,25 +1,27 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import logo from 'client/src/img/logo.png';
 
 const Header = () => {
   return (
     <header>
       <Link className="brand" to="/">
-        <h1 className="header">Coursify</h1>
-        <p> Courses IT yourself</p>
+        <h1 className="header">
+          <img className="Portada" src={logo} alt="Coursify" />
+        </h1>
       </Link>
       <nav className="Menu">
-        <ul>
-          <li>
+        <ul className="NavMenu">
+          <li className="ElementNavMenu">
             <Link to="/">Inicio</Link>
           </li>
-          <li>
+          <li className="ElementNavMenu">
             <Link to="/curso">Cursos</Link>
           </li>
-          <li>
+          <li className="ElementNavMenu">
             <Link to="/profesor">Profesores</Link>
           </li>
-          <li>
+          <li className="ElementNavMenu">
             <Link to="/about">Conócenos</Link>
           </li>
         </ul>

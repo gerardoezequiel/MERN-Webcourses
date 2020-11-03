@@ -16,7 +16,7 @@ const Teachers = () => {
 
   return (
     <main>
-      <button type="button">
+      <button className="btn" type="button">
         <Link to="/crearprofesor">Crear un nuevo Profesor</Link>
       </button>
       <br />
@@ -25,18 +25,18 @@ const Teachers = () => {
         {profeData.map((teacher, i) => {
           return (
             <li key={i}>
-              <h4>{teacher.teacher}</h4>
-              <h4>Descripción:</h4>
-              <h4>{teacher.description}</h4>
-              <h4>Empresa:</h4>
-              <h4>{teacher.company}</h4>
-              <h4>Github:</h4>
-              <h4>{teacher.github}</h4>
-              <h4>E-mail:</h4>
-              <h4>{teacher.email}</h4>
-              <button type="button">
+              <h3>{teacher.teacher}</h3>
+              <h3>Descripción:</h3>
+              <p>{teacher.description}</p>
+              <h3>Empresa:</h3>
+              <p>{teacher.company}</p>
+              <h3>Github:</h3>
+              <p>{teacher.github}</p>
+              <h3>E-mail:</h3>
+              <p>{teacher.email}</p>
+              <button class="btn" type="button">
                 <Link to={'/profemodificar/' + teacher._id}>
-                  Modificar Profesor
+                  Editar
                 </Link>
               </button>
             </li>

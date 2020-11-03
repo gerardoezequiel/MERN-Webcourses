@@ -55,22 +55,23 @@ const Courses = () => {
 
   return (
     <main>
-      <button className="AddCourse" type="button">
-        <Link to="/crearcurso">Crear un nuevo Curso</Link>
-      </button>
-    
-      <Filtro filtro={filtro} />
-      <Texteo texta={texta} />
-      <div className="Lista">
-      <h3>Lista de Cursos:</h3>
-      <ul>
+      <div className="action">
+        <Filtro filtro={filtro} />
+        <Texteo texta={texta} />
+        <button className="btn" type="button">
+          <Link to="/crearcurso">Crear un nuevo Curso</Link>
+        </button>
+      </div>
+      <h3 className="Titulocurso">Lista de Cursos:</h3>
+      <div className="Wrapper-flex-cursos">
+     
+        <ul className="lista-curso-container">
         {cursoData.map((item) => {
           return (
-            <li key={item.id}>
+            <li className="lista-curso" key={item.id}>
+              <img className="image" src="/static/media/curso/javascript.png" alt="image"/>
               <Link to={`/cursodata/${item._id}`}>
-                <h3>
-                  <i>{item.coursename}</i>
-                </h3>
+                <h3>{item.coursename}</h3>
               </Link>
               <br />
               Duración: {item.duration}

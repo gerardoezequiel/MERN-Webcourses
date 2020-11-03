@@ -12,19 +12,12 @@ body {
 a {
   color: whitesmoke;
   text-decoration: none;
+  align-items: center
 }
 
-h3{
-  color: #157960;
-  
-}
-
-h4{
-  color: black;
-  margin-bottom: 0.25rem;
-}
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+

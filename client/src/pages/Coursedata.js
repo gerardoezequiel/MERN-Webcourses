@@ -25,7 +25,8 @@ const Coursedata = () => {
     teacher,
   } = curso;
   return (
-    <main>
+    <main className="Wrapper-flex">
+      <article className="Wrapper">
       <h3>Curso {coursename}:</h3>
       <p>Categoria: {valor[category]}</p>
       <p>Duración: {duration}</p>
@@ -33,9 +34,18 @@ const Coursedata = () => {
       <p>Profesor: {teacher}</p>
       <h3>Descripción del curso:</h3>
       <p>{description}</p>
-      <button type="button">
-        <Link to={'/cursomodificar/' + _id}>Modificar Curso</Link>
-      </button>
+      </article>
+      
+      <div>
+        <button className="btn btn-edit" type="button">
+          <Link to={'/cursomodificar/' + _id}>Modificar</Link>
+        </button>
+      </div>
+      <div className="course-action">
+        <button className="btn btn-edit" type="button">
+          <Link to={'/curso'}>Eliminar</Link>
+        </button>
+      </div>
     </main>
   );
 };

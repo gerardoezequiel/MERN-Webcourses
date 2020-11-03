@@ -51,10 +51,10 @@ const FormCourse = () => {
       <h3>Introduzca el nuevo curso</h3>
 
       <form>
-        <div>
+        {/* <div>
           <label className="Label">Foto:</label>
           <input type="text" name="picture" id="picture" onChange={ajuFot} />
-        </div>
+        </div> */}
         <div>
           <label className="Label">Nombre:</label>
 
@@ -99,7 +99,7 @@ const FormCourse = () => {
           <label>Profesor:</label>
           <input type="text" name="teacher" id="teacher" onChange={ajuPro} />
         </div>
-        <button type="button" onClick={introducecurso}>
+        <button className="AddCourse" type="button" onClick={introducecurso}>
           Crear Curso
         </button>
       </form>

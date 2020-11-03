@@ -58,18 +58,23 @@ const ChaTea = () => {
   };
 
   return (
-    <main>
-      <h2>Introduzca los nuevos datos del profesor</h2>
+    <main className="edit-profe">
+      <h2>Modificar los datos del profesor</h2>
 
       <form>
-        <label>Nombre:</label>
+
+        <div>
+        <label className="Label">Nombre:</label>
         <input
           type="text"
           name="teacher"
           id="teacher"
           value={nom}
           onChange={ajuNom}
-        />
+          />
+        </div>
+
+        <div>
         <label>Github:</label>
         <input
           type="text"
@@ -77,7 +82,10 @@ const ChaTea = () => {
           id="github"
           value={git}
           onChange={ajuGit}
-        />
+          />
+        </div>
+
+        <div>
         <label>Email:</label>
         <input
           type="email"
@@ -85,7 +93,10 @@ const ChaTea = () => {
           id="email"
           value={ema}
           onChange={ajuEma}
-        />
+          />
+        </div>
+
+        <div>
         <label>Empresa:</label>
         <input
           type="text"
@@ -93,20 +104,35 @@ const ChaTea = () => {
           id="company"
           value={emp}
           onChange={ajuEmp}
-        />
+          />
+        </div>
+        
+        <div>
         <label>Descripción:</label>
         <textarea
           name="description"
           id="description"
           value={des}
           onChange={ajuDes}
-        ></textarea>
-        <button type="button" onClick={modificaprofe}>
-          Modificar Profesor
-        </button>
-        <button type="button" onClick={eliminaprofe}>
-          <Link to="/profesor">Eliminar Profesor</Link>
-        </button>
+          ></textarea>
+          
+        </div>
+        
+        <div className="profe-action">
+          <button
+            className="btn btn-edit"
+            type="button"
+            onClick={modificaprofe}
+          >Guardar</button>
+          
+          <button
+            className="btn btn-delete"
+            type="button"
+            onClick={eliminaprofe}
+          >
+            <Link to="/profesor">Eliminar</Link>
+          </button>
+        </div>
       </form>
     </main>
   );

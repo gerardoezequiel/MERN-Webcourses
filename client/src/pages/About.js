@@ -39,7 +39,7 @@ const About = () => {
           </article>
         </div>
     
-        <img className ="Pic" src={about_us} alt="Sobre nosotros" />
+        <img className="Pic" src={about_us} alt="Sobre nosotros" />
   
       </div>
     </div>
