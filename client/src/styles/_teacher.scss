@@ -1,38 +1,54 @@
-.Wrapper-flex {
-  padding: 32px;
+.action {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 32px;
+  margin-top: 32px;
+    
+}
 
-  .Wrapper {
-    flex: 1;
+.Nombreprofe{
+    margin-left:20%;
+    font-size:2rem;
+  }
 
-    article {
-      display: flex;
-      align-items: center;
 
-      img {
-        border-radius: 50%;
-        height: 6rem;
-        width: 6rem;
-        align-items: left;
-        border-color: grey 1rem;
+
+.Wrapper-flex-profes {
+  margin-bottom: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  .lista-profes-container {
+    min-width: 998px;
+    display: grid;
+    list-style: none;
+      
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+
+    .lista-profe {
+      background-color:rgb(194, 194, 194);
+      border: solid 1px black;
+      padding: 5%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px #333;
+      
+
+      .image {
+        height: 200px;
+        width: 100%;
       }
-
-      .Author {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-
-        h4,
-        p {
-          margin: 0.5rem;
+      a {
+        h3 {
+          color: #fff;
         }
       }
     }
+    
   }
 
-  .Pic {
-    flex: 1;
-  }
 }

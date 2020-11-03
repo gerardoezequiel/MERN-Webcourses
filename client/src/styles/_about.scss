@@ -7,7 +7,9 @@
 
   .Wrapper {
     flex: 1;
-
+    h3 {
+      font-size: 2rem;
+    }
     article {
       display: flex;
       align-items: center;

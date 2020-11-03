@@ -16,33 +16,36 @@ const Teachers = () => {
 
   return (
     <main>
+      <div className= "action">
       <button className="btn" type="button">
         <Link to="/crearprofesor">Crear un nuevo Profesor</Link>
       </button>
-      <br />
-      <h2>Lista Profesores</h2>
-      <ul>
-        {profeData.map((teacher, i) => {
-          return (
-            <li key={i}>
-              <h3>{teacher.teacher}</h3>
-              <h3>Descripción:</h3>
-              <p>{teacher.description}</p>
-              <h3>Empresa:</h3>
-              <p>{teacher.company}</p>
-              <h3>Github:</h3>
-              <p>{teacher.github}</p>
-              <h3>E-mail:</h3>
-              <p>{teacher.email}</p>
-              <button class="btn" type="button">
-                <Link to={'/profemodificar/' + teacher._id}>
-                  Editar
-                </Link>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      </div>
+
+        <h3 className="Nombreprofe">Lista de Profesores</h3>
+        <div className="Wrapper-flex-profes">
+
+        <ul className="lista-profes-container">
+          {profeData.map((teacher, i) => {
+            return (
+              <li className="lista-profe" key={i}>
+                <h2>{teacher.teacher}</h2>
+                <h3>Descripción:</h3>
+                <p>{teacher.description}</p>
+                <h3>Empresa:</h3>
+                <p>{teacher.company}</p>
+                <h3>Github:</h3>
+                <p>{teacher.github}</p>
+                <h3>E-mail:</h3>
+                <p>{teacher.email}</p>
+                <button class="btn" type="button">
+                  <Link to={'/profemodificar/' + teacher._id}>Editar</Link>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </main>
   );
 };
