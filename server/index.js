@@ -4,7 +4,7 @@ import logger from './lib/logger.js';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
+dotenv.config();
 // midlewares
 import httpLoggerMiddleware from './middleware/logger-middleware.js';
 import jsonResponseMiddleware from './middleware/json-response.js';
@@ -13,21 +13,11 @@ import errorHandlerMiddleware from './middleware/error-handler.js';
 import teacherRouter from './routes/teacher.js';
 import courseRouter from './routes/course.js';
 
-dotenv.config();
+
 const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || 4000;
 export const databaseURI = 'mongodb://localhost/web-courses';
 
-/* console.log('env variables'{
-  PORT: process.env.PORT,
-  HOST: process.env.HOST,
-});
-
-console.log({
-  HOST
-  PORT
-})
- */
 const server = express();
 mongoose.connect(databaseURI, {
   useFindAndModify: false,
@@ -46,6 +36,6 @@ server.use(courseRouter);
 server.use(errorHandlerMiddleware);
 
 server.listen(process.env.PORT, () =>
-  logger.info(`server listening ${JSON.stringify({ HOST, PORT })}`),
+  logger.info(`server listening 📡 ${JSON.stringify({ HOST, PORT })}`),
 );
 
