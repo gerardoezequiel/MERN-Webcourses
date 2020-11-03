@@ -70,70 +70,85 @@ const ChaCou = () => {
   };
 
   return (
-    <main>
+    <main className="editar-curso">
       <h2>Modifica los datos del curso</h2>
 
       <form>
-        <label>Foto:</label>
+        {/* <label>Foto:</label>
         <input
           type="text"
           name="picture"
           id="picture"
           value={fot}
           onChange={ajuFot}
-        />
-        <label>Nombre:</label>
-        <input
-          type="text"
-          name="coursename"
-          id="coursename"
-          value={nom}
-          onChange={ajuNom}
-        />
-        <label>Categoría</label>
-        <select name="category" id="category" value={cat} onChange={ajuCat}>
-          <option value="0">HTML</option>
-          <option value="1">CSS</option>
-          <option value="2">JavaScript</option>
-        </select>
-        <label>Descripción:</label>
-        <textarea
-          name="description"
-          id="description"
-          value={des}
-          onChange={ajuDes}
-        ></textarea>
-        <label>Duración:</label>
-        <input
-          type="text"
-          name="duration"
-          id="duration"
-          value={dur}
-          onChange={ajuDur}
-        />
-        <label>Dirección web:</label>
-        <input
-          type="url"
-          name="urlcourse"
-          id="urlcourse"
-          value={url}
-          onChange={ajuUrl}
-        />
-        <label>Profesor:</label>
-        <input
-          type="text"
-          name="teacher"
-          id="teacher"
-          value={pro}
-          onChange={ajuPro}
-        />
-        <br />
-        <button type="button" onClick={modificacurso}>
-          Modificar Curso
+        /> */}
+
+        <div>
+          <label className="Label">Nombre:</label>
+          <label>Nombre:</label>
+          <input
+            type="text"
+            name="coursename"
+            id="coursename"
+            value={nom}
+            onChange={ajuNom}
+          />
+        </div>
+        <div>
+          <label>Categoría</label>
+          <select name="category" id="category" value={cat} onChange={ajuCat}>
+            <option value="0">HTML</option>
+            <option value="1">CSS</option>
+            <option value="2">JavaScript</option>
+          </select>
+        </div>
+        <div>
+          <label>Descripción:</label>
+          <textarea
+            name="description"
+            id="description"
+            value={des}
+            onChange={ajuDes}
+          ></textarea>
+        </div>
+        <div>
+          <label>Duración:</label>
+          <input
+            type="text"
+            name="duration"
+            id="duration"
+            value={dur}
+            onChange={ajuDur}
+          />
+        </div>
+        <div>
+          <label>Dirección web:</label>
+          <input
+            type="url"
+            name="urlcourse"
+            id="urlcourse"
+            value={url}
+            onChange={ajuUrl}
+          />
+        </div>
+        <div>
+          <label>Profesor:</label>
+          <input
+            type="text"
+            name="teacher"
+            id="teacher"
+            value={pro}
+            onChange={ajuPro}
+          />
+        </div>
+        <div className="botonera">
+        <button className="btn" type="button" onClick={modificacurso}>
+          Actualizar
         </button>
-        <button type="button" onClick={eliminacurso}>
-          <Link to="/curso">Eliminar Curso</Link>
-        </button>
+        <button className="btn" type="button" onClick={eliminacurso}>
+          <Link to="/curso">Eliminar</Link>
+          </button>
+        </div>
       </form>
     </main>
   );

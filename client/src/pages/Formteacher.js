@@ -37,25 +37,44 @@ const FormTeacher = () => {
   };
 
   return (
-    <main>
+    <main className="crear-profe">
       <h2>Introduzca los datos del nuevo profesor</h2>
 
       <form>
-        <label>Nombre:</label>
-        <input type="text" name="teacher" id="teacher" onChange={ajuNom} />
-        <label>Github:</label>
-        <input type="text" name="github" id="github" onChange={ajuGit} />
-        <label>Email:</label>
-        <input type="email" name="email" id="email" onChange={ajuEma} />
-        <label>Empresa:</label>
-        <input type="text" name="company" id="company" onChange={ajuEmp} />
-        <label>Descripción:</label>
-        <textarea
-          name="description"
-          id="description"
-          onChange={ajuDes}
-        ></textarea>
-        <button type="button" onClick={introduceprofe}>
+        <div>
+          <label className="Label">Nombre:</label>
+          <input
+            type="text"
+            name="teacher"
+            id="teacher"
+            onChange={ajuNom} />
+        </div>
+
+        <div>
+          <label>Github:</label>
+          <input type="text" name="github" id="github" onChange={ajuGit} />
+        </div>
+
+        <div>
+          <label>Email:</label>
+          <input type="email" name="email" id="email" onChange={ajuEma} />
+        </div>
+
+        <div>
+          <label>Empresa:</label>
+          <input type="text" name="company" id="company" onChange={ajuEmp} />
+        </div>
+
+        <div>
+          <label>Descripción:</label>
+          <textarea
+            name="description"
+            id="description"
+            onChange={ajuDes}
+          ></textarea>
+        </div>
+
+        <button className="btn" type="button" onClick={introduceprofe}>
           Crear Profesor
         </button>
       </form>

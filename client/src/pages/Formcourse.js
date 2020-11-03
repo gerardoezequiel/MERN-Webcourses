@@ -47,38 +47,59 @@ const FormCourse = () => {
   };
 
   return (
-    <main>
-      <h2>Introduzca el nuevo curso</h2>
+    <main className="crear-curso">
+      <h3>Introduzca el nuevo curso</h3>
 
       <form>
-        <label>Foto:</label>
-        <input type="text" name="picture" id="picture" onChange={ajuFot} />
-        <label>Nombre:</label>
-        <input
-          type="text"
-          name="coursename"
-          id="coursename"
-          onChange={ajuNom}
-        />
-        <label>Categoría</label>
-        <select name="category" id="category" onChange={ajuCat}>
-          <option value="0">HTML</option>
-          <option value="1">CSS</option>
-          <option value="2">JavaScript</option>
-        </select>
-        <label>Descripción:</label>
-        <textarea
-          name="description"
-          id="description"
-          onChange={ajuDes}
-        ></textarea>
-        <label>Duración:</label>
-        <input type="text" name="duration" id="duration" onChange={ajuDur} />
-        <label>Dirección web:</label>
-        <input type="url" name="urlcourse" id="urlcourse" onChange={ajuUrl} />
-        <label>Profesor:</label>
-        <input type="text" name="teacher" id="teacher" onChange={ajuPro} />
-        <button type="button" onClick={introducecurso}>
+        {/* <div>
+          <label className="Label">Foto:</label>
+          <input type="text" name="picture" id="picture" onChange={ajuFot} />
+        </div> */}
+        <div>
+          <label className="Label">Nombre:</label>
+
+          <input
+            type="text"
+            name="coursename"
+            id="coursename"
+            placeholder="Nombre del Curso"
+            onChange={ajuNom}
+          />
+        </div>
+        <div>
+          <label>Categoría</label>
+          <select
+            className="Cat"
+            name="category"
+            id="category"
+            onChange={ajuCat}
+          >
+            <option value="0">HTML</option>
+            <option value="1">CSS</option>
+            <option value="2">JavaScript</option>
+          </select>
+        </div>
+        <div>
+          <label>Descripción:</label>
+          <textarea
+            name="description"
+            id="description"
+            onChange={ajuDes}
+          ></textarea>
+        </div>
+        <div>
+          <label>Duración:</label>
+          <input type="text" name="duration" id="duration" onChange={ajuDur} />
+        </div>
+        <div>
+          <label>Dirección web:</label>
+          <input type="url" name="urlcourse" id="urlcourse" onChange={ajuUrl} />
+        </div>
+        <div>
+          <label>Profesor:</label>
+          <input type="text" name="teacher" id="teacher" onChange={ajuPro} />
+        </div>
+        <button className="Add " type="button" onClick={introducecurso}>
           Crear Curso
         </button>
       </form>

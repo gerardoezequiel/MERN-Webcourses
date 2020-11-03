@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <p>Made with love for and by Daniel, Gerardo & Mariano</p>
+      <p>Made with love  by Daniel, Gerardo & Mariano</p>
     </footer>
   );
 };

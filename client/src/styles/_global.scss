@@ -8,18 +8,11 @@ body {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-style: normal;
 }
-
 a {
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
-  &:hover {
-    border-bottom: 1px solid currentColor;
-  }
-  &:focus {
-    color: grey;
-  }
+  align-items: center
 }
 
 .app {
@@ -27,3 +20,4 @@ a {
   display: flex;
   flex-direction: column;
 }
+

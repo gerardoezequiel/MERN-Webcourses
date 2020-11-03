@@ -71,44 +71,52 @@ const ChangeCourse = () => {
   };
 
   return (
-    <main>
-      <h2>Introduzca el nuevo curso</h2>
+    <main className="editar-curso">
+      <h2>Editar curso</h2>
 
       <form>
-        <label>Foto:</label>
+        {/* <label>Foto:</label>
         <input
           type="text"
           name="picture"
           id="picture"
           value={picture}
           onChange={ajuFot}
-        />
-        <label>Nombre:</label>
-        <input
-          type="text"
-          name="coursename"
-          id="coursename"
-          value={coursename}
-          onChange={ajuNom}
-        />
-        <label>Categoría</label>
-        <select
-          name="category"
-          id="category"
-          value={category}
-          onChange={ajuCat}
-        >
-          <option value="0">HTML</option>
-          <option value="1">CSS</option>
-          <option value="2">JavaScript</option>
-        </select>
-        <label>Descripción:</label>
-        <textarea
-          name="description"
-          id="description"
-          value={description}
-          onChange={ajuDes}
-        ></textarea>
+        /> */}
+        <div>
+          <label className="Label">Nombre:</label>
+          <input
+            type="text"
+            name="coursename"
+            id="coursename"
+            value={coursename}
+            onChange={ajuNom}
+          />
+        </div>
+        <div>
+          <label>Categoría</label>
+          <select
+            name="category"
+            id="category"
+            value={category}
+            onChange={ajuCat}
+          >
+            <option value="0">HTML</option>
+            <option value="1">CSS</option>
+            <option value="2">JavaScript</option>
+          </select>
+        </div>
+        <div>
+          <label>Descripción:</label>
+          <textarea
+            name="description"
+            id="description"
+            value={description}
+            onChange={ajuDes}
+          ></textarea>
+        </div>
+
+        <div>
         <label>Duración:</label>
         <input
           type="text"
@@ -116,7 +124,9 @@ const ChangeCourse = () => {
           id="duration"
           value={duration}
           onChange={ajuDur}
-        />
+          />
+        </div>
+        <div>
         <label>Dirección web:</label>
         <input
           type="url"
@@ -124,7 +134,10 @@ const ChangeCourse = () => {
           id="urlcourse"
           value={urlcourse}
           onChange={ajuUrl}
-        />
+          />
+        </div>
+        
+        <div>
         <label>Profesor:</label>
         <input
           type="text"
@@ -132,10 +145,13 @@ const ChangeCourse = () => {
           id="teacher"
           value={teacher}
           onChange={ajuPro}
-        />
-        <button type="button" onClick={modificacurso}>
-          Modificar Curso
+          />
+        </div>
+        <div>
+        <button type="button" className="btn btn-edit" onClick={modificacurso}>
+            Guardar
         </button>
+        </div>
       </form>
     </main>
   );
