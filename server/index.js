@@ -16,7 +16,7 @@ import courseRouter from './routes/course.js';
 
 const HOST = process.env.HOST || 'http://localhost';
 const PORT = process.env.PORT || 4000;
-export const databaseURI = 'mongodb://localhost/web-courses';
+export const databaseURI = process.env.DATABASE_URL || 'mongodb://localhost/web-courses';
 
 const server = express();
 mongoose.connect(databaseURI, {
